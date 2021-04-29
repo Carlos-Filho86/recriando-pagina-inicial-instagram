@@ -1,0 +1,176 @@
+/*Resetando todas as configurações*/
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+body{
+  width: 100%;
+  min-width: 100vh;
+  background-color: rgb(243, 243, 243);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+/*Container principal*/
+.instagram-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 60%;
+  height: 100vh;
+}
+
+.instagram-phone{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 50%;
+}
+
+.instagram-phone img{
+  height: 50rem;
+}
+
+/*Estilizando o contairner da direita*/
+.instagram-continue{
+  display: flex;
+  align-items: center; /*Os itens serão alinhados no centro*/
+  justify-content: space-around; /*Os itens são distribuídos uniformemente dentro do contêiner de alinhamento ao longo do eixo principal*/
+  flex-direction: column; /*Mudamos o eixo de linha para coluna.Os pontos de início e fim principais são iguais aos pontos de antes e depois do modo de escrita.*/
+  width: 50%; /*Esse contairner vai ter o mesmo tamanho do cantainer da foto*/
+  min-height: 34rem;
+}
+
+/*Estilizando os grupos*/
+.group{
+  display: flex;
+  justify-content: space-between; /*Os itens são distribuídos uniformemente dentro do contêiner de alinhamento ao longo do eixo principal.*/
+  align-items: center;
+  flex-direction: column;
+  background-color: #ffffff;
+  width: 100%;
+  padding: 1.3rem 0; /*1.3rem tanto em cima quanto embaixo e 0 dos lados*/
+  border: 1px solid lightgray;
+}
+
+/*Usaremos o seletor :nht-chil() para pegar os filho de um elemento*/
+.group:nth-child(1){
+    min-height: 3rem; /*altura minima de 19rem*/
+}
+
+/*Nossa imagem tem uma altura de 3rem*/
+.instagram-logo{
+  height: 3rem;
+}
+
+/*A foto do perfil*/
+.profile-photo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  overflow: hidden; /*Para imgagem não sair */
+}
+
+.profile-photo img{
+  height: 6rem;
+}
+
+/*Vamos estilizar os links e adicionar os botoes*/
+
+/*Botão continuar como Carlos Filho*/
+.instagram-login{
+  background-color: #0095f6;
+  color: #ffffff;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+/*Remover conta*/
+.instagram-logout{
+  color: #0095f6;
+  margin-top: 1rem;
+}
+
+/*Link "Não é Carlos Filho"*/
+.not-account{
+  color: rgb(160,160,160);
+}
+
+/*Link "Alternar contas ou Insvreva-se"*/
+.link-blue{
+  color: #0095f6;
+}
+
+/*Link "Get the app"*/
+.get-the-app{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 3rem 0;
+}
+
+/*Link "download"*/
+.download{
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1rem;
+}
+
+/*Classe "download Pai"*/
+.app-download{
+  height: 3rem;
+  width: 10rem;
+  background-size: cover;
+}
+
+/*Exemplo de seletor*/
+/*Classe filha 1 do download*/
+.app-download:nth-child(1){
+  background-image: url('apple-button.png');
+}
+
+/*Classe filha 2 do download*/
+.app-download:nth-child(2){
+  background-image: url('googleplay-button.png');
+}
+
+/*Vamos deixar o site responsivo desktop, tablet e celular*/
+/*Media queries*/
+@media(max-width: 1024px){
+  .instagram-wrapper{
+      width: 90%;
+    }
+}
+
+@media(max-width: 650px){
+  body{
+    background-color: #ffffff;
+  }
+  .instagram-wrapper{
+      width: none;
+  }
+
+  .instagram-phone{
+      display: none;
+  }
+
+  .instagram-continue{
+      width: 100%;
+  }
+
+  .group{
+      border: 1px solid transparent;
+  }
+}
